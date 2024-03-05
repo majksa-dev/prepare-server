@@ -31,9 +31,8 @@ sudo systemctl restart sshd
 # Setup my user
 MY_PASSWORD=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13; printf)
 MY_USER=majksa
-sudo useradd -m -p $(perl -e 'print crypt($ARGV[0], "password")' "$MY_PASSWORD") $MY_USER
 MY_HOME=/home/$MY_USER
-sudo usermod -aG docker -aG sudo -aG ssh $MY_USER
+sudo useradd -m -p $(perl -e 'print crypt($ARGV[0], "password")' "$MY_PASSWORD") -G sudo,docker,ssh -s /usr/bin/zsh $MY_USER
 
 sudo mkdir -p $MY_HOME/.ssh
 sudo chmod 700 $MY_HOME/.ssh
