@@ -42,7 +42,7 @@ sudo chown -R $MY_USER:$MY_USER $MY_HOME/.ssh
 sudo chmod 600 $MY_HOME/.ssh/authorized_keys
 
 # Install Oh My ZSH
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo -u $MY_USER sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install PowerLevel10k
 OMZSH_CUSTOM=$MY_HOME/.oh-my-zsh/customer
