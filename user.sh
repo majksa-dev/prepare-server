@@ -11,5 +11,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 # Setup .dotfiles
 git clone https://github.com/majksa-dev/dotfiles.git .dotfiles
 cd .dotfiles
-stow .
+stow --adopt .
+git restore .
 cd -
