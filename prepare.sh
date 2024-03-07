@@ -5,7 +5,7 @@ sudo update-locale LANG=en_US.UTF-8
 
 # Install from apt
 sudo apt-get update
-sudo apt-get install -y curl zsh git ssh ruby-full zoxide stow ca-certificates build-essential
+sudo apt-get install -y curl zsh git ssh ruby-full zoxide stow ca-certificates build-essential neovim
 
 # Install colorls
 sudo gem install colorls
